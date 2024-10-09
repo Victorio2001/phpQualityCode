@@ -109,7 +109,10 @@ $listeFonts = $repoFont->getAll();
                                     <button class="btn btn-danger mr-2" name="DeleteButton" value="<?php echo $film->getIdFont()?>" type="submit">Supprimer</button>
                                 </form>
                                 <form method="post" action="../controller/#">
-                                    <button class="btn btn-light" name="EditButton" value="<?php echo $film->getIdFont()?>" type="submit">Modifier</button>
+                                    <button class="btn btn-light mr-2" name="EditButton" value="<?php echo $film->getIdFont()?>" type="submit">Modifier</button>
+                                </form>
+                                <form method="post" action="../controller/#">
+                                    <button class="btn btn-light" name="EditButton" value="<?php echo $film->getIdFont()?>" type="submit">Acheter</button>
                                 </form>
                             </div>
                         </div>
