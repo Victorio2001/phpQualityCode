@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['AddFont'])) {
         $DAOFont->insertFont($MaFont);
         //Redirection
         $NomFont = $MaFont->getNomFont();
-        header('location: ../../src/view/listeFont.php?succes=FilmAdd&Film=' .$NomFont);
+        header('location: ../../src/view/listeFont.php?succes=FontAdd&Film=' .$NomFont);
     } else {
         header('location: ../../src/view/listeFont.php?error=token');
     }
@@ -76,6 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['AddFont'])) {
 //}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['DeleteButton'])) {
-    $DAOFilm->deleteFilm((int)$_POST['DeleteButton']);
-    header('location: ../../src/view/listeFilm.php?succes=FilmDeleted');
+    $DAOFont->deleteFont((int)$_POST['DeleteButton']);
+    header('location: ../../src/view/listeFont.php?succes=FontDeleted');
 }

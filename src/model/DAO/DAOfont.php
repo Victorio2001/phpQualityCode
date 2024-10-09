@@ -45,63 +45,28 @@ class DAOfont
         return $resultSet;
     }
 
-    public function getFilmById(int $id): ?Film {
+    public function getFontById(int $idFont): ?Font {
         $resultSet = NULL;
-        $query = "SELECT * FROM film WHERE id = :id";
+        $query = "SELECT * FROM font WHERE idFont = :idFont";
 
         $reqPrep = $this->pdoObject->prepare($query);
-        $res = $reqPrep->execute(['id' => $id]);
+        $res = $reqPrep->execute(['idFont' => $idFont]);
 
         if ($res !== FALSE) {
             $row = ($tmp = $reqPrep->fetch(\PDO::FETCH_ASSOC)) ? $tmp : null;
             if (!is_null($row)) {
-                $resultSet = new Film($row);
+                $resultSet = new Font($row);
             }
         }
         return $resultSet;
     }
 
-    public function updateFilm(Film $film): ?Film
-    {
 
-        $resultSet = null;
-        // Entité existante
-        $query = "UPDATE film"
-            . " SET nom=:nom, "
-            . " dateDebut=:dateDebut, "
-            . " matricule=:matricule "
-            . " WHERE id = :id";
+    public function deleteFont(int $id): bool {
 
-        // On prépare la requête
+        $query = "DELETE FROM font WHERE idFont = :idFont";
         $reqPrep = $this->pdoObject->prepare($query);
-        $res = $reqPrep->execute([
-            'nom' => $film->getNom(),
-            'dateDebut' => $film->getDateDebut("Y-m-d"),
-            'matricule' => $film->getMatricule(),
-            'id' => $film->getId(),
-        ]);
-
-        if ($res !== false) {
-            // Si la mise à jour s'est bien déroulée, on retourne l'entité mise à jour
-            $resultSet = $film;
-        }
-        return $resultSet;
-    }
-
-    public function deleteFilm(int $id): bool {
-
-        //Supprimer la clef de la table originel en lasstttttt.
-        $query = "DELETE FROM filmsutilisateurs WHERE idFilm = :id";
-        $reqPrep = $this->pdoObject->prepare($query);
-        $reqPrep->execute(['id' => $id]);
-
-        $query2 = "DELETE FROM plan WHERE idFilm = :id";
-        $reqPrep = $this->pdoObject->prepare($query2);
-        $res = $reqPrep->execute(['id' => $id]);
-
-        $query3 = "DELETE FROM film WHERE id = :id";
-        $reqPrep = $this->pdoObject->prepare($query3);
-        $res = $reqPrep->execute(['id' => $id]);
+        $res = $reqPrep->execute(['idFont' => $id]);
 
         return $res !== false;
     }

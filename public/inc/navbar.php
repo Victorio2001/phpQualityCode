@@ -29,17 +29,17 @@ $MonutilisateurLog = $_SESSION['userLog'];
                 </div>
             </li>
 
+<!--            <li class="nav-item dropdown ml-2">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                    Film [Session-Bdd]-->
+<!--                </a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--                    <a class="dropdown-item" href="../../src/view/formAddFilmSession.php">Ajouter Film [Sessions]</a>-->
+<!--                    <a class="dropdown-item" href="../../src/view/formAddFilm.php">Ajouter Film [BDD]</a>-->
+<!--                    <a class="dropdown-item" href="../../src/view/ListeFilm.php">Liste Films</a>-->
+<!--                </div>-->
+<!--            </li>-->
 
-            <li class="nav-item dropdown ml-2">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Film [Session-Bdd]
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="../../src/view/formAddFilmSession.php">Ajouter Film [Sessions]</a>
-                    <a class="dropdown-item" href="../../src/view/formAddFilm.php">Ajouter Film [BDD]</a>
-                    <a class="dropdown-item" href="../../src/view/ListeFilm.php">Liste Films</a>
-                </div>
-            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">

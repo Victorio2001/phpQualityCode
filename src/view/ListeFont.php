@@ -22,43 +22,43 @@ $listeFonts = $repoFont->getAll();
 <body>
 <?php include('../../public/inc/navbar.php'); ?>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
 
-<!--    --><?php
-//    //https://getbootstrap.com/docs/4.0/components/alerts/
-//    //https://openclassrooms.com/forum/sujet/afficher-l-erreur-en-get
-//    if (isset($_GET['error'])) {
-//        $error = $_GET['error'];
-//        if ($error == 'token') {
-//            echo ' <div class="alert alert-danger" role="alert">
-//                      Erreur de token Font non Ajouté.
-//                   </div>';
-//        }
-//    }
-//
-//    if (isset($_GET['succes'])) {
-//        $succes = $_GET['succes'];
-//        if ($succes == 'FilmAdd') {
-//            $NomDuFilm = $_GET['Film'];
-//            echo ' <div class="alert alert-success" role="alert">
-//                      la Font '.$NomDuFilm.' à bien été ajouté.
-//                   </div>';
-//        }
-//
+<?php
+    //https://getbootstrap.com/docs/4.0/components/alerts/
+    //https://openclassrooms.com/forum/sujet/afficher-l-erreur-en-get
+    if (isset($_GET['error'])) {
+        $error = $_GET['error'];
+        if ($error == 'token') {
+            echo ' <div class="alert alert-danger" role="alert">
+                      Erreur de token Font non Ajouté.
+                   </div>';
+        }
+    }
+
+    if (isset($_GET['succes'])) {
+        $succes = $_GET['succes'];
+        if ($succes == 'FontAdd') {
+            $NomDuFilm = $_GET['Film'];
+            echo ' <div class="alert alert-success" role="alert">
+                      la Font '.$NomDuFilm.' à bien été ajouté.
+                   </div>';
+        }
+
 //        if ($succes == 'FilmUpdate') {
 //            $NomDuFilm = $_GET['name'];
 //            echo ' <div class="alert alert-success" role="alert">
 //                      le Film '.$NomDuFilm.' à bien été modifié.
 //                   </div>';
 //        }
-//
-//        if ($succes == 'FilmDeleted') {
-//            echo ' <div class="alert alert-success" role="alert">
-//              le Film à bien été supprimé.
-//           </div>';
-//        }
-//    }
-//    ?>
+
+        if ($succes == 'FontDeleted') {
+            echo ' <div class="alert alert-success" role="alert">
+              la font à bien été supprimé.
+           </div>';
+        }
+    }
+?>
 
 
 
@@ -105,7 +105,7 @@ $listeFonts = $repoFont->getAll();
                             </blockquote>
 
                             <div class="d-flex justify-content-start">
-                                <form method="post" action="../controller/#">
+                                <form method="post" action="../controller/traitementFont.php">
                                     <button class="btn btn-danger mr-2" name="DeleteButton" value="<?php echo $film->getIdFont()?>" type="submit">Supprimer</button>
                                 </form>
                                 <form method="post" action="../controller/#">
