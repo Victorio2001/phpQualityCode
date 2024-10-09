@@ -10,7 +10,7 @@ $_SESSION['tokenUserConnect'] = $tokenUserForm;
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>GestionMovies</title>
+    <title>Poc</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -32,7 +32,7 @@ $_SESSION['tokenUserConnect'] = $tokenUserForm;
 <body>
 
 <div class="login-box">
-    <h2 class="text-center mb-4">Bienvenue sur GestionMovies</h2>
+    <h2 class="text-center mb-4">Proof Of Concept FontDesign</h2>
     <?php
     //https://getbootstrap.com/docs/4.0/components/alerts/
     //https://openclassrooms.com/forum/sujet/afficher-l-erreur-en-get
@@ -51,7 +51,7 @@ $_SESSION['tokenUserConnect'] = $tokenUserForm;
     }
     ?>
     <script>
-        alert('Bienvenue Sur le meilleur site de gestion de film')
+        alert('faut lancer le fichier "../src/Test/InsertUser.php" pour génerer l\'user avec le mail "Mario@gmail.com" et commme mdp "Mario"')
     </script>
     <form method="post" action="../controller/TraitementConnect.php">
         <div class="form-group">
