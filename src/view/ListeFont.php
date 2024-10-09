@@ -60,34 +60,68 @@ $testGetById = $repoFilm->getFilmById(2);
 //    }
 //    ?>
 
-    <h4 class="mb-4"><?php echo count($listeFilms)?> Font(s) disponibles</h4>
 
 
-        <?php foreach ($listeFilms as $film): ?>
-
-            <div class="card">
-                <div class="card-header">
-                    <?php echo $film->getNom(); ?>
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                    </blockquote>
-
-                    <div class="d-flex justify-content-start">
-                        <form method="post" action="../controller/traitementFilm.php">
-                            <button class="btn btn-danger mr-2" name="DeleteButton" value="<?php echo $film->getId()?>" type="submit">Supprimer</button>
-                        </form>
-                        <form method="post" action="../controller/traitementFilm.php">
-                            <button class="btn btn-light" name="EditButton" value="<?php echo $film->getId()?>" type="submit">Modifier</button>
-                        </form>
+    <div class="row">
+        <div class="d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-header">
+                        [Nom de la police super cool]
                     </div>
+                    <div class="card-body "> <!-- bg-light  -->
+                        <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </blockquote>
 
-
+                        <div class="d-flex justify-content-start mt-3">
+                            <form method="post" action="../controller/#">
+                                <a class="btn btn-light mr-2" href="#"><img style="width: 30px" src="../../public/img/italique.png" class="img-fluid" alt="Responsive image"></a>
+                            </form>
+                            <form method="post" action="../controller/#">
+                                <a class="btn btn-light mr-2" href="#"><img style="width: 30px" src="../../public/img/souligner.png" class="img-fluid" alt="Responsive image"></a>
+                            </form>
+                            <form method="post" action="../controller/#">
+                                <a class="btn btn-light" href="#"><img style="width: 30px" src="../../public/img/gras.png" class="img-fluid" alt="Responsive image"></a>
+                            </form>
+                        </div>
+                    </div>
                 </div>
+
+            <div class="col-8">
+                <h4 class="mb-4"><?php echo count($listeFilms)?> Font(s) disponibles</h4>
+                <input class="form-control mb-2">
+
+                <?php foreach ($listeFilms as $film): ?>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <?php echo $film->getNom(); ?>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+
+                            <div class="d-flex justify-content-start">
+                                <form method="post" action="../controller/#">
+                                    <button class="btn btn-danger mr-2" name="DeleteButton" value="<?php echo $film->getId()?>" type="submit">Supprimer</button>
+                                </form>
+                                <form method="post" action="../controller/#">
+                                    <button class="btn btn-light" name="EditButton" value="<?php echo $film->getId()?>" type="submit">Modifier</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-        <?php endforeach; ?>
+        </div>
+    </div>
+
+
+
+
 
 
 </div>
