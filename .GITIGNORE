@@ -1,0 +1,9 @@
+.idea
+.env
+/config/localConfig.php
+/vendor
+/node_modules
+composer.json
+composer.lock
+package.json
+yarn.lock
