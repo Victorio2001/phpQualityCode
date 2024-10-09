@@ -24,7 +24,7 @@ $MonutilisateurLog = $_SESSION['userLog'];
                     Catalogue Police d’écriture
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Ajouter Font</a>
+                    <a class="dropdown-item" href="../../src/view/formAddFont.php">Ajouter Font</a>
                     <a class="dropdown-item" href="../../src/view/ListeFont.php">Liste Fonts</a>
                 </div>
             </li>
@@ -37,7 +37,6 @@ $MonutilisateurLog = $_SESSION['userLog'];
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="../../src/view/formAddFilmSession.php">Ajouter Film [Sessions]</a>
                     <a class="dropdown-item" href="../../src/view/formAddFilm.php">Ajouter Film [BDD]</a>
-                    <a class="dropdown-item" href="../../src/view/formEditFilm.php">Modifier Film [BDD]</a>
                     <a class="dropdown-item" href="../../src/view/ListeFilm.php">Liste Films</a>
                 </div>
             </li>

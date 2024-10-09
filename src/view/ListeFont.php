@@ -2,10 +2,10 @@
 require_once("../../config/localConfig.php");
 
 //$films = $_SESSION['Films'];
-use MonApp\model\DAO\DAOfilm;
-$repoFilm = new DAOfilm();
-$listeFilms = $repoFilm->getAll();
-$testGetById = $repoFilm->getFilmById(2);
+use MonApp\model\DAO\DAOfont;
+$repoFont = new DAOfont();
+$listeFonts = $repoFont->getAll();
+//$testGetById = $listeFonts->getFilmById(2);
 //$deleteFilm = $repoFilm->deleteFilm(1);
 
 ?>
@@ -89,14 +89,14 @@ $testGetById = $repoFilm->getFilmById(2);
                 </div>
 
             <div class="col-8">
-                <h4 class="mb-4"><?php echo count($listeFilms)?> Font(s) disponibles</h4>
+                <h4 class="mb-4"><?php echo count($listeFonts)?> Font(s) disponibles</h4>
                 <input class="form-control mb-2">
 
-                <?php foreach ($listeFilms as $film): ?>
+                <?php foreach ($listeFonts as $film): ?>
 
                     <div class="card">
                         <div class="card-header">
-                            <?php echo $film->getNom(); ?>
+                            <?php echo $film->getNomFont(); ?>
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
@@ -106,10 +106,10 @@ $testGetById = $repoFilm->getFilmById(2);
 
                             <div class="d-flex justify-content-start">
                                 <form method="post" action="../controller/#">
-                                    <button class="btn btn-danger mr-2" name="DeleteButton" value="<?php echo $film->getId()?>" type="submit">Supprimer</button>
+                                    <button class="btn btn-danger mr-2" name="DeleteButton" value="<?php echo $film->getIdFont()?>" type="submit">Supprimer</button>
                                 </form>
                                 <form method="post" action="../controller/#">
-                                    <button class="btn btn-light" name="EditButton" value="<?php echo $film->getId()?>" type="submit">Modifier</button>
+                                    <button class="btn btn-light" name="EditButton" value="<?php echo $film->getIdFont()?>" type="submit">Modifier</button>
                                 </form>
                             </div>
                         </div>
